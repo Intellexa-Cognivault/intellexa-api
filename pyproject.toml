@@ -1,7 +1,21 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "intellexa-api"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.115.12",
+    "intellexa-core @ git+https://github.com/Intellexa-cognivault/intellexa-core@main",
+    "fastapi>=0.95",
+    "uvicorn>=0.22"
+]
+
+[tool.setuptools]
+packages = ["api"]
+package_dir = {"": "src"}
+
