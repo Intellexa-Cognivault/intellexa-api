@@ -1,0 +1,15 @@
+# .github/workflows/init_db.yml
+name: Initialize DB
+
+on: [deployment]
+
+jobs:
+  init-db:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          echo "DB_DSN=${{ secrets.PROD_DB_DSN }}" >> .env
+          echo "READ_REPLICA_DSN=${{ secrets.PROD_READ_REPLICA_DSN }}" >> .env
+      - run: pip install -e .
+      - run: python -m scripts.init_db
