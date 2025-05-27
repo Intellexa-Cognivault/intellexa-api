@@ -380,10 +380,10 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.68" },
     { name = "fastapi", specifier = ">=0.95" },
-    { name = "fastapi", specifier = ">=0.115.12" },
     { name = "intellexa-core", git = "https://github.com/Intellexa-cognivault/intellexa-core?rev=main" },
-    { name = "uvicorn", specifier = ">=0.22" },
+    { name = "uvicorn", specifier = ">=0.15" },
 ]
 
 [[package]]
