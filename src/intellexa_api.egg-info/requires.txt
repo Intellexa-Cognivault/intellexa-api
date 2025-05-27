@@ -1,4 +1,4 @@
-fastapi>=0.115.12
+fastapi>=0.68
 intellexa-core@ git+https://github.com/Intellexa-cognivault/intellexa-core@main
 fastapi>=0.95
-uvicorn>=0.22
+uvicorn>=0.15
